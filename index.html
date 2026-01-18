@@ -6,14 +6,14 @@
   <title>Lista de compras</title>
   <link rel="stylesheet" href="./dist/output.css">
 </head>
-<body>
-  <main class="max-w-80 m-auto">
+<body class="h-screen overflow-hidden">
+  <main class="max-w-80 m-auto h-screen flex flex-col">
 
-    <header class="py-6">
+    <header class="py-6 shrink-0">
       <h1 class="text-4xl font-semibold">Lista de compras</h1>
     </header>
 
-    <section aria-labelledby="form-title" class="flex justify-center">
+    <section aria-labelledby="form-title" class="flex justify-center shrink-0">
       <h2 id="form-title" class="sr-only">Adicionar item</h2>
 
       <form class="flex gap-2">
@@ -24,28 +24,43 @@
           type="text"
           name="text"
           placeholder="Ex: arroz, feijão, etc..."
-          class="border border-blue-950 rounded-md text-center p-2 outline-none focus:border-blue-600 focus:placeholder:text-blue-950">
+          class="border border-blue-950 rounded-md text-center p-2 outline-none focus:border-blue-600 focus:placeholder:text-blue-950"
+        >
 
-        <button type="submit" class="bg-blue-900 p-2 rounded-md text-white hover:bg-blue-950 transition">Adicionar item</button>
+        <button
+          type="submit"
+          class="bg-blue-900 p-2 rounded-md text-white hover:bg-blue-950 transition"
+        >
+          Adicionar item
+        </button>
       </form>
     </section>
 
-    <section aria-labelledby="list-title" class="mt-4">
+    <section aria-labelledby="list-title" class="mt-4 flex-1 min-h-0">
       <h2 id="list-title" class="sr-only">Itens da lista</h2>
-      <div class="flex justify-center">
-        <ul class="w-80 rounded-md">
+
+      <div class="flex justify-center h-full">
+        <ul class="w-80 flex-1 overflow-y-auto rounded-md">
           <li class="py-1">
-            <span class="flex justify-between bg-blue-900 p-2 rounded-md text-white"> item 1 <img src="./assets/icons/trash.svg" alt="..."></span>
+            <span class="flex justify-between bg-blue-900 p-2 rounded-md text-white">
+              item 1
+              <img src="./assets/icons/trash.svg" alt="Remover item">
+            </span>
           </li>
         </ul>
       </div>
     </section>
 
-    <aside class="box-alert" role="status" aria-live="polite">
-      <span class="bg-red-600 p-2 rounded-md text-white flex justify-between"><img src="./assets/icons/alert.svg" alt="...">Item removido da lista <img src="./assets/icons/remove.svg" alt="..."></span>
-    </aside>
+    <!-- <aside class="box-alert mt-4 shrink-0" role="status" aria-live="polite">
+      <span class="bg-red-600 p-2 rounded-md text-white flex justify-between">
+        <img src="./assets/icons/alert.svg" alt="Alerta">
+        Item removido da lista
+        <img src="./assets/icons/remove.svg" alt="Fechar alerta">
+      </span>
+    </aside> -->
 
   </main>
+
   <script src="./script.js"></script>
 </body>
 </html>
