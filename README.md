@@ -20,7 +20,3 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 1. Faça o clone deste repositório:
    ```bash
    git clone [https://github.com/afkjuansilva/lista-de-compras.git]
-   
-## Visual do Projeto
-
-<img width="474" height="440" alt="image" src="https://github.com/user-attachments/assets/5479f541-5904-472b-94ed-69877c840c3a" />
