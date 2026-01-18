@@ -9,16 +9,19 @@
 <body>
   <main>
     <header class="py-6 m-auto">
-      <h1 class="text-center text-4xl">lista de compras</h1>
+      <h1 class="text-center text-4xl">Lista de compras</h1>
     </header>
 
-    <section>
+    <section class="flex justify-center">
       <form>
         <input 
           type="text"
           name="text"
-          placeholder="digite um item para adicionar">
-          <button type="submit">adicionar item</button>
+          placeholder="EX: arroz, feijão, etc..."
+          class="border border-blue-950 rounded-md  text-center p-[.5rem] outline-none accent-blue-950 focus:border-blue-600 focus:placeholder:text-blue-950">
+          <button 
+            type="submit"
+            class="bg-blue-900 p-[.5rem] rounded-md text-white hover:bg-blue-950">Adicionar item</button>
       </form>
     </section>
 
