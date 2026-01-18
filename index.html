@@ -41,24 +41,23 @@
 
       <div class="flex justify-center h-full">
         <ul class="w-80 flex-1 overflow-y-auto rounded-md">
-          <li class="py-1">
+          <!-- <li class="py-1">
             <span class="flex justify-between bg-blue-900 p-2 rounded-md text-white">
               item 1
               <img src="./assets/icons/trash.svg" alt="Remover item">
             </span>
-          </li>
+          </li> -->
         </ul>
       </div>
     </section>
 
-    <!-- <aside class="box-alert mt-4 shrink-0" role="status" aria-live="polite">
-      <span class="bg-red-600 p-2 rounded-md text-white flex justify-between">
-        <img src="./assets/icons/alert.svg" alt="Alerta">
-        Item removido da lista
-        <img src="./assets/icons/remove.svg" alt="Fechar alerta">
+    <aside class="box-alert hidden mt-4 shrink-0" role="status" aria-live="polite">
+      <span class="bg-red-600 p-2 rounded-md text-white flex justify-between items-center">
+        <img src="./assets/icons/alert.svg" alt="Alerta" class="mr-2">
+        <span class="alert-message">Item removido da lista</span>
+        <img src="./assets/icons/remove.svg" alt="Fechar alerta" class="ml-2 cursor-pointer" id="close-alert">
       </span>
-    </aside> -->
-
+    </aside>
   </main>
 
   <script src="./script.js"></script>
