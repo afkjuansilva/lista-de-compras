@@ -7,39 +7,44 @@
   <link rel="stylesheet" href="./dist/output.css">
 </head>
 <body>
-  <main>
-    <header class="py-6 m-auto">
-      <h1 class="text-center text-4xl">Lista de compras</h1>
+  <main class="max-w-80 m-auto">
+
+    <header class="py-6">
+      <h1 class="text-4xl font-semibold">Lista de compras</h1>
     </header>
 
-    <section class="flex justify-center">
-      <form>
-        <input 
+    <section aria-labelledby="form-title" class="flex justify-center">
+      <h2 id="form-title" class="sr-only">Adicionar item</h2>
+
+      <form class="flex gap-2">
+        <label for="item" class="sr-only">Nome do item</label>
+
+        <input
+          id="item"
           type="text"
           name="text"
-          placeholder="EX: arroz, feijão, etc..."
-          class="border border-blue-950 rounded-md  text-center p-[.5rem] outline-none accent-blue-950 focus:border-blue-600 focus:placeholder:text-blue-950">
-          <button 
-            type="submit"
-            class="bg-blue-900 p-[.5rem] rounded-md text-white hover:bg-blue-950">Adicionar item</button>
+          placeholder="Ex: arroz, feijão, etc..."
+          class="border border-blue-950 rounded-md text-center p-2 outline-none focus:border-blue-600 focus:placeholder:text-blue-950">
+
+        <button type="submit" class="bg-blue-900 p-2 rounded-md text-white hover:bg-blue-950 transition">Adicionar item</button>
       </form>
     </section>
 
-    <section>
-      <div>
-        <ul>
-          <li>item 1</li>
-          <li>item 2</li>
-          <li>item 3</li>
-          <li>item 4</li>
-          <li>item 5</li>
+    <section aria-labelledby="list-title" class="mt-4">
+      <h2 id="list-title" class="sr-only">Itens da lista</h2>
+      <div class="flex justify-center">
+        <ul class="w-80 rounded-md">
+          <li class="py-1">
+            <span class="block bg-blue-900 p-2 rounded-md text-white">item 1</span>
+          </li>
         </ul>
       </div>
-
-      <div class="box-alert">
-        <span>item removido da lista</span>
-      </div>
     </section>
+
+    <aside class="box-alert" role="status" aria-live="polite">
+      <span class="bg-red-600 block p-2 rounded-md text-white">Item removido da lista</span>
+    </aside>
+
   </main>
   <script src="./script.js"></script>
 </body>
